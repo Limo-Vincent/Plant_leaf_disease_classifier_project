@@ -159,7 +159,11 @@ recommendations = {
 
 # Streamlit UI
 st.title("🌿 Plant Disease Classifier with Recommendations")
-st.write("Upload a plant leaf image to identify its health status and get care tips.")
+st.write("Upload a corn, potato, or tomato leaf image — we'll detect if it's healthy or diseased and suggest treatment tips.")
+
+# Add space
+st.write("")
+st.write("") 
 
 # Two-column layout
 col1, col2 = st.columns([1, 2])
