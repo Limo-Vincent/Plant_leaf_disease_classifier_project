@@ -11,17 +11,12 @@ st.set_page_config(
     layout="wide"
 )
 
-# Model & Class Name Loading
-
-
-model = tf.keras.models.load_model("Model_deploy/model.keras")
-
 # Load class names from text file
-with open("Model_deploy/class_names.txt", "r") as f:
+with open("class_names.txt", "r") as f:
     class_names = [line.strip() for line in f.readlines()]
 
-# Load the model
-
+# Load model
+model = tf.keras.models.load_model("model.keras")
 
 # Recommendations Database 
 recommendations = {
@@ -170,7 +165,14 @@ if uploaded_file is None:
     # Show example images if nothing is uploaded
     st.info("Please upload an image to get started. Or see our examples below.")
     
-    
+    st.subheader("Example Images")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.image("image (612).JPG", caption="Corn (Common Rust)", width = 200)
+    with col2:
+        st.image("image (58).JPG", caption="Potato (Early Blight)", width = 200)
+    with col3:
+        st.image("image (156).JPG", caption="Tomato (Late Blight)", width = 200)
 
 else:
     # Prediction Logic 
