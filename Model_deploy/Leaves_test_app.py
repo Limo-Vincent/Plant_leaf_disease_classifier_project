@@ -168,11 +168,11 @@ if uploaded_file is None:
     st.subheader("Example Images")
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("image (612).JPG", caption="Corn (Common Rust)", width = 200)
+        st.image("Images/image (612).JPG", caption="Corn (Common Rust)", width = 200)
     with col2:
-        st.image("image (58).JPG", caption="Potato (Early Blight)", width = 200)
+        st.image("Images/image (58).JPG", caption="Potato (Early Blight)", width = 200)
     with col3:
-        st.image("image (156).JPG", caption="Tomato (Late Blight)", width = 200)
+        st.image("Images/image (156).JPG", caption="Tomato (Late Blight)", width = 200)
 
 else:
     # Prediction Logic 
