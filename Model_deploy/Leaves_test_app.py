@@ -16,7 +16,11 @@ with open("Model_deploy/class_names.txt", "r") as f:
     class_names = [line.strip() for line in f.readlines()]
 
 # Load model
-model = tf.keras.models.load_model("Model_deploy/model.keras")
+@st.cache_resource
+def load_plant_model():
+    model = tf.keras.models.load_model("Model_deploy/model.keras")
+    return model
+model = load_plant_model()
 
 # Recommendations Database 
 recommendations = {
