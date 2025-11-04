@@ -3,7 +3,7 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-
+import os
 # Page Setup
 st.set_page_config(
     page_title="Plant Leaf Disease Classifier",
@@ -11,10 +11,12 @@ st.set_page_config(
     layout="wide"
 )
 
+BASE_DIR = os.path.dirname(__file__)  # folder where Leaves_test_app.py lives
+MODEL_PATH = os.path.join(BASE_DIR, "model.keras")
 # Model & Class Name Loading
 @st.cache_resource
 def load_plant_model():
-    model = tf.keras.models.load_model("model.keras")
+    model = tf.keras.models.load_model("MODEL_PATH")
     return model
 
 # Load class names from text file
