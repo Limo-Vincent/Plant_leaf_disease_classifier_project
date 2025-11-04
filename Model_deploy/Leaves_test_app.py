@@ -165,6 +165,15 @@ if uploaded_file is None:
     # Show example images if nothing is uploaded
     st.info("Please upload an image to get started. Or see our examples below.")
     
+    st.subheader("Example Images")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.image("Model_deploy/Images/corn.JPG", caption="Corn (Common Rust)", width = 200)
+    with col2:
+        st.image("Model_deploy/Images/potato.JPG", caption="Potato (Early Blight)", width = 200)
+    with col3:
+        st.image("Model_deploy/Images/Tomato.JPG", caption="Tomato (Late Blight)", width = 200)
+
 else:
     # Prediction Logic 
     with st.spinner('Analyzing your leaf... 🍃'):
