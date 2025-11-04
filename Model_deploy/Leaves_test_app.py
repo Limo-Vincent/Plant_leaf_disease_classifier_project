@@ -12,7 +12,7 @@ st.set_page_config(
 )
 
 # Load class names from text file
-with open("class_names.txt", "r") as f:
+with open("Model_deploy/class_names.txt", "r") as f:
     class_names = [line.strip() for line in f.readlines()]
 
 # Load model
