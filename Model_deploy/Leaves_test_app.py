@@ -14,7 +14,7 @@ st.set_page_config(
 # Model & Class Name Loading
 @st.cache_resource
 def load_plant_model():
-    model = tf.keras.models.load_model("Model_deploy/model.keras")
+    model = tf.keras.models.load_model("model.keras")
     return model
 
 # Load class names from text file
