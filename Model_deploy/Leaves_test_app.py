@@ -170,9 +170,9 @@ if uploaded_file is None:
     with col1:
         st.image("Model_deploy/Images/corn.JPG", caption="Corn (Common Rust)", width = 200)
     with col2:
-        st.image("Model_deploy/Images/potato.JPG", caption="Potato (Early Blight)", width = 200)
+        st.image("Model_deploy/Images/poatato.JPG", caption="Potato (Early Blight)", width = 200)
     with col3:
-        st.image("Model_deploy/Images/Tomato.JPG", caption="Tomato (Late Blight)", width = 200)
+        st.image("Model_deploy/Images/tomato.JPG.JPG", caption="Tomato (Late Blight)", width = 200)
 
 else:
     # Prediction Logic 
