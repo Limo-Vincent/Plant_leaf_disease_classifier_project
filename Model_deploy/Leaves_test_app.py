@@ -12,17 +12,16 @@ st.set_page_config(
 )
 
 # Model & Class Name Loading
-@st.cache_resource
-def load_plant_model():
-    model = tf.keras.models.load_model("model.keras")
-    return model
+
+
+model = tf.keras.models.load_model("Model/model.keras")
 
 # Load class names from text file
 with open("Model_deploy/class_names.txt", "r") as f:
     class_names = [line.strip() for line in f.readlines()]
 
 # Load the model
-model = load_plant_model()
+
 
 # Recommendations Database 
 recommendations = {
