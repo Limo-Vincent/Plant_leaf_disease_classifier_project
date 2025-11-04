@@ -14,7 +14,7 @@ st.set_page_config(
 # Model & Class Name Loading
 
 
-model = tf.keras.models.load_model("Model/model.keras")
+model = tf.keras.models.load_model("Model_deploy/model.keras")
 
 # Load class names from text file
 with open("Model_deploy/class_names.txt", "r") as f:
